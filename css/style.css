@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #4d3572;
+}
+
+body{
+    margin: 1px;
+    height: 100vh;
+    background: linear-gradient(45deg, #845EC2, #D65DB1,#FF6F91,#FF9671,#FFC75F,#F9F871);
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    width: 40vw;
+    height: 40vh;
+    box-shadow: 0 0 10px 3px #f52354;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        ". . million million million . ."
+        "numbers numbers numbers numbers numbers stars stars"
+        ". . btn btn btn . .";
+    place-items: center;
+    place-content: space-evenly;
+    row-gap: 5vh;
+    background-color: rgba(249, 248, 113, 0.5);
+    border-radius: 50px;
+}
+
+h1{
+    text-align: center;
+    grid-area: million;
+    font-size: 3rem;
+    letter-spacing: 3px;
+}
+
+.numbers{
+    grid-area: numbers;
+    display: flex;
+    gap: 4vw;
+    font-size: 2rem;
+}
+
+.numbers > div{
+    cursor: pointer;
+    
+}
+
+.stars{
+    grid-area: stars;
+    display: flex;
+    gap: 4vw;
+    font-size: 2rem;   
+}
+
+.stars > div{
+    cursor: pointer;
+    color: #ff7d4e;
+}
+
+.btn{
+    position: relative;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    border: 2px solid #FF9671;
+    border-radius: 20px;
+    grid-area: btn;
+    transition: all 0.3s ease 0s;
+}
+
+.btn:hover{
+    box-shadow: 0 0 5px 2px #FF9671;
+    border: 1px solid #FF9671;
+    transform: translateY(-10%);
+}
+
+h4{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 1580px) {
+    .container{
+        height: 60vh;
+        width: 60vw;
+        /* background-color: rgba(249, 248, 113, 0.1);
+        border-radius: 0;
+        box-shadow: none; */
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .container{
+        height: 80vh;
+        width: 80vw;
+        /* background-color: rgba(249, 248, 113, 0.1);
+        border-radius: 0;
+        box-shadow: none; */
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    .container{
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(249, 248, 113, 0.1);
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+}
